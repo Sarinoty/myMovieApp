@@ -1,6 +1,7 @@
 import Header from "@/components/Header/Header";
-import './globals.css'
+import './globals.scss'
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import { roboto, montserrat } from "@/fonts"; // On importe les fonts crées dans fonts.js au niveau du RooLayout pour qu'elles soient dispo pour toute l'app
 
 export const metadata = {
   title: 'Create Next App',
@@ -10,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>
+      <body className={`${roboto.variable} ${montserrat.variable}`}>
         <Header />
         <main>
           {children}

@@ -4,7 +4,16 @@ const path = require("path");
 const nextConfig = {
     sassOptions: {
         includePaths: [path.join(__dirname, "src/styles")],
-    }
-}
+    },
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'image.tmdb.org',
+                pathname: '/t/p/w500/**',
+            },
+        ],
+    },
+};
 
 module.exports = nextConfig
