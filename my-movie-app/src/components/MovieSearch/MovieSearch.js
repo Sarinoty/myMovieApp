@@ -28,7 +28,7 @@ const MovieSearch = () => {
                 onBlur={() => setHasFocus(false)} // Quand l'élément perd le focus.
                 onFocus={() => setHasFocus(true)} // Quand l'élément prend le focus.
             />
-            {movieResults.length > 0 && hasFocus && <MovieSearchResults movieResults={movieResults} />}
+            {movieResults.length > 0 && hasFocus && <MovieSearchResults movieResults={movieResults} />} {/* Composant client car appelé depuis un composant client. */}
         </div>
     );
 };
