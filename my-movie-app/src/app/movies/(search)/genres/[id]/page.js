@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import SearchResults from "../../SearchResults";
 
-const GenreIdPage = ({params}) => {
-    return (
-        <div>
-            <p>Genre id : {params.id}</p>
-        </div>
-    );
+const GenreIdPage = ({ params, searchParams }) => { // searchParams = paramètres GET dans l'URL
+  return <SearchResults searchParams={searchParams} genreId={params.id} />;
 };
 
 export default GenreIdPage;

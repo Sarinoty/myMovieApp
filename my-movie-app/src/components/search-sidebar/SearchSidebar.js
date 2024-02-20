@@ -19,7 +19,7 @@ const SearchSidebar = ({genres}) => {
     }
 
     const title = getSidebarTitle();
-    console.log(segment);
+    //console.log(segment);
     return (
         <div className={styles.sidebar}>
             <h1>Tous les &quot;{title}&quot;</h1>
