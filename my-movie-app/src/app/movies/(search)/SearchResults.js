@@ -3,15 +3,14 @@ import styles from "./SearchResults.module.scss";
 import MediaCard from "@/components/media-card/MediaCard";
 
 const SearchResults = async (searchParams, genreId) => { // Paramètres reçus des pages movies/page et (search)/page
-    const {results} = await getMovieByPath("/discover/movie", [ // On crée la requête API avec les paramètres qui ont été passés dans l'URL par le Form
+    const { results } = await getMovieByPath("/discover/movie", [ // On crée la requête API avec les paramètres qui ont été passés dans l'URL par le Form
         { key: "sort_by", value: searchParams.sort_by },
         { key: "release_date.gte", value: searchParams["release_date.gte"] },
         { key: "release_date.lte", value: searchParams["release_date.lte"] },
         { key: "with_genres", value: genreId },
     ]);
     //console.log(results);
-    console.log(searchParams.sort_by);
-    console.log(searchParams["release_date.gte"]);
+    console.log(searchParams);
     return (
         <div className={styles.results}>
             {results
