@@ -2,7 +2,7 @@ import { getMovieByPath } from "@/utils/movieClient";
 import styles from "./SearchResults.module.scss";
 import MediaCard from "@/components/media-card/MediaCard";
 
-const SearchResults = async (searchParams, genreId) => { // Paramètres reçus des pages movies/page et (search)/page
+const SearchResults = async ({searchParams, genreId}) => { // Paramètres reçus des pages movies/page et (search)/page - Accolades obligatoires !
     const { results } = await getMovieByPath("/discover/movie", [ // On crée la requête API avec les paramètres qui ont été passés dans l'URL par le Form
         { key: "sort_by", value: searchParams.sort_by },
         { key: "release_date.gte", value: searchParams["release_date.gte"] },
