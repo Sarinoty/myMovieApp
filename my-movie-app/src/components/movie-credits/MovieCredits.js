@@ -5,7 +5,6 @@ import { getMovieByPath } from '@/utils/movieClient';
 
 const MovieCredits = async ({movieId}) => {
     const {cast} = await getMovieByPath(`/movie/${movieId}/credits`);
-    console.log(cast);
     return (
         <div className={styles.credits}>
             {cast.slice(0, 4).map((person) => (

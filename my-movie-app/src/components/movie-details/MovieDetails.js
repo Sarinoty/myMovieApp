@@ -30,7 +30,7 @@ const MovieDetails = ({movie}) => { // On récupère l'objet movie qui avait ét
                     <p className={styles.production}>
                         Production : 
                         <span>
-                            {movie.production_companies.map((company) => company.name).join(", ")}
+                            {" "}{movie.production_companies.map((company) => company.name).join(", ")}
                         </span>
                     </p>
                     <h2>Synopsis</h2>

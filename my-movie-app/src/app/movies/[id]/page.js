@@ -1,7 +1,9 @@
 import MovieDetails from "@/components/movie-details/MovieDetails";
+import SimilarMovies from "@/components/similar-movies/SimilarMovies";
 import { getMovieByPath } from "@/utils/movieClient";
 import { notFound } from "next/navigation";
 import React from "react";
+import { Suspense } from "react";
 
 // Paramètres de segment :
 export const dynamic = "force-static";
@@ -21,6 +23,9 @@ const MovieIdPage = async ({params}) => {
     return (
         <div>
             <MovieDetails movie={movie}/> {/* Ici on appelle le composant 'MovieDetails' et on lui passe un props appelé 'movie' contenant notre élément movie */}
+            <Suspense fallback={<p>Chargement...</p>}>
+                <SimilarMovies movieId={movie.id} />
+            </Suspense>
         </div>
     );
 };
