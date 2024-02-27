@@ -9,7 +9,7 @@ const MediaCard = ({media}) => {
             <Link href={`/movies/${media.id}`}>
                 <div className={styles.image}>
                     <Image // Un pattern doit être ajouté dans next.config.js pour pouvoir accéder à l'url
-                    src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}${media.poster_path}`}
+                    src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${media.poster_path}`} // '/w500' correspond à la taille désirée de l'image (cette option est fournie par l'API)
                     alt={media.title}
                     fill
                     />
