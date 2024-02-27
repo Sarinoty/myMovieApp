@@ -1,4 +1,4 @@
-import MovieDetails from "@/components/movie-details/MovieDetail";
+import MovieDetails from "@/components/movie-details/MovieDetails";
 import { getMovieByPath } from "@/utils/movieClient";
 import { notFound } from "next/navigation";
 import React from "react";
