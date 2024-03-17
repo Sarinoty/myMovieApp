@@ -1,12 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import styles from "./MediaCard.module.scss";
-import Link from 'next/link';
+import Link from "next/link";
 
-const MediaCard = ({media}) => {
+const MediaCard = ({ media, locale }) => {
     return (
         <div className={styles.card}>
-            <Link href={`/movies/${media.id}`}>
+            <Link href={`/${locale}/movies/${media.id}`}>
                 <div className={styles.image}>
                     <Image // Un pattern doit être ajouté dans next.config.js pour pouvoir accéder à l'url
                     src={`${process.env.NEXT_PUBLIC_TMDB_IMAGE_BASE_PATH}/w500${media.poster_path}`} // '/w500' correspond à la taille désirée de l'image (cette option est fournie par l'API)

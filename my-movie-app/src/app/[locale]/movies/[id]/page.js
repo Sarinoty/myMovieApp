@@ -24,7 +24,7 @@ const MovieIdPage = async ({params: {id, locale}}) => {
         <div>
             <MovieDetails movie={movie}/> {/* Ici on appelle le composant 'MovieDetails' et on lui passe un props appelé 'movie' contenant notre élément movie */}
             <Suspense fallback={<p>Chargement...</p>}>
-                <SimilarMovies movieId={movie.id} />
+                <SimilarMovies movieId={movie.id} locale={locale} />
             </Suspense>
         </div>
     );
