@@ -4,9 +4,10 @@ import { getMovieByPath } from "@/utils/movieClient";
 
 const MovieSearchLayout = async ({ children, params: { locale } }) => {
   const { genres } = await getMovieByPath("/genre/movie/list", [], locale);
+
   return (
     <div className={styles.searchContainer}>
-      <SearchSidebar genres={genres} />
+      <SearchSidebar genres={genres} locale={locale} />
       <div>{children}</div>
     </div>
   );

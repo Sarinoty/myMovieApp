@@ -1,0 +1,15 @@
+{
+    "popular": {
+        "title": "Most popular"
+    },
+    "genres": {
+        "title": "Browse by genre"
+    },
+    "header": {
+        "series": "TV Shows",
+        "films": "Movies"
+    },
+    "recherche": {
+        "title": "Search an item..."
+    }
+}

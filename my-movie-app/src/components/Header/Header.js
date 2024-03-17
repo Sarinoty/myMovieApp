@@ -5,9 +5,11 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 import MovieSearch from "../MovieSearch/MovieSearch";
 import LanguageSelector from "../language-selector/LanguageSelector";
+import { getDictionary } from "@/utils/dictionaries";
 
 
-const Header = ({ locale }) => {
+const Header = async ({ locale }) => {
+  const i18n = await getDictionary(locale);
     return (
       <header className={styles.header}>
         <div className={styles.logo}>
@@ -19,14 +21,14 @@ const Header = ({ locale }) => {
           <nav>
             <ul>
               <li>
-                <Link href={`/${locale}/series`}>Séries</Link>
+                <Link href={`/${locale}/series?loc=${locale}`}>{i18n.header.series}</Link>
               </li>
               <li>
-                <Link href={`/${locale}/movies`}>Films</Link>
+                <Link href={`/${locale}/movies?loc=${locale}`}>{i18n.header.films}</Link>
               </li>
             </ul>
           </nav>
-          <MovieSearch />
+          <MovieSearch locale={locale} />
           <div>
             <FontAwesomeIcon icon={faUser} />
           </div>

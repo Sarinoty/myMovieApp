@@ -3,7 +3,7 @@ import { useSelectedLayoutSegment, useParams, notFound } from "next/navigation";
 import styles from "./searchSidebar.module.scss";
 import Form from "./form/Form";
 
-const SearchSidebar = ({genres}) => {
+const SearchSidebar = ({genres, locale}) => {
     const segment = useSelectedLayoutSegment(); // Ce hook renvoie le nom du segment inférieur, s'il existe, depuis le layout où il a été importé.
     const {id} = useParams();
 
@@ -19,11 +19,11 @@ const SearchSidebar = ({genres}) => {
     }
 
     const title = getSidebarTitle();
-    //console.log(segment);
+
     return (
         <div className={styles.sidebar}>
-            <h1>Tous les &quot;{title}&quot;</h1>
-            <Form />
+            <h1>{(locale === "fr") ? "Tous les " : "All "}&quot;{title}&quot;</h1>
+            <Form locale={locale} />
         </div>
     );
 };
