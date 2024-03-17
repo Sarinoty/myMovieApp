@@ -5,7 +5,6 @@ import "server-only"; // Etant donné qu'on utilise des variables d'environnemen
 // Ici on prépare la requête vers themoviedb afin de ne pas avoir à tout répéter à chaque fois.
 
 export const getMovieByPath = (path, params = [], language = "fr-FR") => {
-    console.log(params);
     const url = new URL(`${process.env.TMDB_API_URL}${path}`);
     url.searchParams.append("api_key", process.env.TMDB_API_KEY);
     url.searchParams.append("language", language);

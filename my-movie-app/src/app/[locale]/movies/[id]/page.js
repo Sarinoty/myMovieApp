@@ -13,8 +13,8 @@ export const dynamic = "force-static";
 export const revalidate = 3600;
 
 
-const MovieIdPage = async ({params}) => {
-    const movie = await getMovieByPath(`/movie/${params.id}`);
+const MovieIdPage = async ({params: {id, locale}}) => {
+    const movie = await getMovieByPath(`/movie/${id}`, [], locale);
 
     if(!movie.original_title) { // Si on n'arrive pas à récupérer le nom du film (c'est qu'il y a un problème avec l'API) alors on redirige vers une page notFound.
         return notFound();
