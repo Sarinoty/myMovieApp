@@ -21,10 +21,10 @@ const Header = async ({ locale }) => {
           <nav>
             <ul>
               <li>
-                <Link href={`/${locale}/series?loc=${locale}`}>{i18n.header.series}</Link>
+                <Link href={`/${locale}/series`}>{i18n.header.series}</Link>
               </li>
               <li>
-                <Link href={`/${locale}/movies?loc=${locale}`}>{i18n.header.films}</Link>
+                <Link href={`/${locale}/movies`}>{i18n.header.films}</Link>
               </li>
             </ul>
           </nav>

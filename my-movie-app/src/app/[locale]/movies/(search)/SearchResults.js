@@ -16,7 +16,7 @@ const SearchResults = async ({searchParams, genreId, locale}) => { // Paramètre
             {results
                 .filter((movie) => movie.poster_path) // On filtre pour n'afficher que les movies qui ont une image
                 .map((movie) => (
-                    <MediaCard key={movie.id} media={movie} locale={(locale) ? locale : searchParams.loc}/>
+                    <MediaCard key={movie.id} media={movie} locale={locale}/>
                 ))
             }
         </div>
