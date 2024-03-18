@@ -13,6 +13,16 @@ export const getMovieByPath = (path, params = [], language = "fr-FR") => {
         .forEach((param) => {
             url.searchParams.append(param.key, param.value);
         });
-//console.log(url);
+
     return fetch(url).then((res) => res.json());
 };
+
+export const getHydratedMovies = async (movieIds, language = "fr") => {
+    const moviePromises = movieIds.map((movieId) => // On obtient un tableau de promesses
+      getMovieByPath(`/movie/${movieId}`, [], language)
+    );
+  
+    const movies = await Promise.all(moviePromises);
+  
+    return movies;
+  };
