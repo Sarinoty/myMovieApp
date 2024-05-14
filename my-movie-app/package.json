@@ -18,17 +18,17 @@
     "@prisma/client": "^5.11.0",
     "bcrypt": "^5.1.1",
     "negotiator": "^0.6.3",
-    "next": "latest",
+    "next": "^14.2.3",
     "next-auth": "^4.24.7",
-    "react": "latest",
+    "react": "^18.3.1",
     "react-debounce-input": "^3.3.0",
-    "react-dom": "latest",
+    "react-dom": "^18.3.1",
     "sass": "^1.68.0",
     "server-only": "^0.0.1"
   },
   "devDependencies": {
     "eslint": "latest",
-    "eslint-config-next": "latest",
+    "eslint-config-next": "^14.2.3",
     "prisma": "^5.11.0"
   }
 }
