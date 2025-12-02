@@ -27,8 +27,8 @@
     "server-only": "^0.0.1"
   },
   "devDependencies": {
-    "eslint": "latest",
-    "eslint-config-next": "^14.2.3",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.6",
     "prisma": "^6.18.0"
   }
 }
